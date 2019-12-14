@@ -1,7 +1,7 @@
-'''
+"""
 Play a sequence of beeps
 Based on https://stackoverflow.com/a/27978895/3210924
-'''
+"""
 import sys
 
 import numpy as np
@@ -19,7 +19,7 @@ DURATION = 0.5 # in seconds, may be float
 SEMITONE = 2**(1/12)
 
 class Note():
-    '''Class for managing musical notes'''
+    """Class for managing musical notes"""
     scale = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 
     def __init__(self, note, base=BASE_FREQUENCY, volume=VOLUME,
@@ -37,12 +37,12 @@ class Note():
 
     @staticmethod
     def get_interval(note):
-        '''Return the interval of this note from the base note'''
+        """Return the interval of this note from the base note"""
         return Note.scale.index(note)
 
     @staticmethod
     def get_frequency(interval, base=BASE_FREQUENCY):
-        '''Return the frequency of an interval'''
+        """Return the frequency of an interval"""
         return base * SEMITONE**interval
 
     @staticmethod
