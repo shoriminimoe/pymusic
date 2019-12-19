@@ -21,9 +21,7 @@ SAMPLING_RATE = 44100 # sampling rate, Hz, must be integer
 TEMPO = 100 # BPM, must be an integer
 SEMITONE = 2**(1/12)
 
-note_attributes = [
-        'pitch', 'accidental', 'octave', 'duration'
-        ]
+note_attributes = ['pitch', 'accidental', 'octave', 'duration']
 NoteTuple = namedtuple('NoteTuple', note_attributes)
 
 class Note():
