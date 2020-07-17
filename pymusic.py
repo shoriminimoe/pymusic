@@ -67,7 +67,7 @@ class Note():
     @classmethod
     def get_interval(cls, note):
         """Return the interval of this note from the tuning note"""
-        return (cls.scale[note.pitch] 
+        return (cls.scale[note.pitch]
             + note.accidental
             + (12 * (note.octave - TUNING_OCTAVE)))
 
